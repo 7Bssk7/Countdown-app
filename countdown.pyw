@@ -16,7 +16,10 @@ def calculate_day():
     elif days_left == 0:
         num_days.set("This is the day!")
     else:
-        root.destroy
+        root.destroy()
+
+    root.after(60000, calculate_day)   
+
 
 
 
@@ -60,6 +63,5 @@ display_num.pack(expand=True)
 
 
 calculate_day()
-
 
 root.mainloop()
